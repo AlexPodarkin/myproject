@@ -1,0 +1,56 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %} Оформить заказ {% endblock %}
+
+{% block head %}
+    <link rel="shortcut icon" type="image/x-icon" href="{% static 'myapp/index/make_order.png' %}"/>
+{% endblock %}
+
+{% block main %}
+    {% if message %}
+        <br><br>
+        <div class="placing_order">
+            <h3>
+                {{ message }}
+            </h3>
+        </div>
+    {% endif %}
+    <div class="description">
+        <h3>
+            Здесь представлены формы табличек, цвет и шрифт можно комбинировать по вашему желанию.
+        </h3>
+    </div>
+    <div class="flex-container">
+
+        {% for address in addresses %}
+            <figure>
+                <img src="{{ address.foto.url }}" alt="img">
+                <figcaption>Эскиз № {{ address.sketch_number }}<br> Цена: {{ address.price }} &#8381;</figcaption>
+            </figure>
+        {% endfor %}
+    </div>
+    <div class="form-group">
+        <form class="form-group" action="{% url 'make_order' %}" method="post" enctype="multipart/form-data">
+            {% if form %}
+            <div class="description-form">
+                <h3>
+                    ФОРМА ДЛЯ ЗАКАЗА
+                </h3>
+            </div>
+
+                {% csrf_token %}
+                {{ form.as_p }}
+                <div class="send">
+                    <input type="submit" value="Отправить">
+                </div>
+            {% endif %}
+            <div class="description-order">
+                <p>
+                    *Если у вас возникли вопросы, вы всегда можете связаться с нами,<br> контакты в правом нижнем углу
+                    экрана.
+                </p>
+            </div>
+        </form>
+    </div>
+{% endblock %}

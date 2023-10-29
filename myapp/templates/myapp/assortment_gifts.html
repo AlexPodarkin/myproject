@@ -1,0 +1,59 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %} PodarkiN Show {% endblock %}
+
+{% block head %}
+    <link rel="shortcut icon" type="image/x-icon" href="{% static 'myapp/index/assortment_gifts.png' %}"/>
+{% endblock %}
+
+{% block main %}
+    <div class="description-printing-mugs">
+        <h3>
+            Краткий обзор магазина PodarkiN...
+        </h3>
+    </div>
+    <ul class="foto_polaroid">
+        <li class="polaroid_li"><img alt=""
+                                     src="{% static 'myapp/foto_assortment_gifts/assortment_gifts1.jpg' %}"
+                                     width="200">
+            <p>Мягкие игрушки&#129361;</p></li>
+        <li class="polaroid_li"><img alt=""
+                                     src="{% static 'myapp/foto_assortment_gifts/assortment_gifts2.jpg' %}"
+                                     width="200"/>
+            <p>Шары на палочках#</p></li>
+        <li class="polaroid_li"><img alt=""
+                                     src="{% static 'myapp/foto_assortment_gifts/assortment_gifts3.jpg' %}"
+                                     width="200"/>
+            <p>Сувенирная продукция#</p></li>
+        <li class="polaroid_li"><img alt=""
+                                     src="{% static 'myapp/foto_assortment_gifts/assortment_gifts4.jpg' %}"
+                                     width="200"/>
+            <p>Шары ШДМ;</p></li>
+    </ul>
+    <br>
+    <ul class="foto_polaroid">
+        <li class="polaroid_li"><img alt="" src="{% static 'myapp/foto_assortment_gifts/assortment_gifts5.jpg' %}"
+                                     width="200">
+            <p>Индивидуальные надписи&#127880;</p></li>
+        <li class="polaroid_li"><img alt="" src="{% static 'myapp/foto_assortment_gifts/assortment_gifts6.jpg' %}"
+                                     width="200"/>
+            <p>Много шаров#</p></li>
+        <li class="polaroid_li"><img alt="" src="{% static 'myapp/foto_assortment_gifts/assortment_gifts7.jpg' %}"
+                                     width="200"/>
+            <p>Большие подарочные коробки&#127873;</p></li>
+        <li class="polaroid_li"><img alt="" src="{% static 'myapp/foto_assortment_gifts/assortment_gifts8.jpg' %}"
+                                     width="200"/>
+            <p>Фольгированные шары&#128151;</p></li>
+    </ul>
+    <br>
+    <ul class="foto_polaroid">
+        <li class="polaroid_li"><img alt="" src="{% static 'myapp/foto_assortment_gifts/assortment_gifts9.jpg' %}"
+                                     width="200">
+            <p>Надежда ждет вас VK#</p></li>
+        <li class="polaroid_li"><img alt="" src="{% static 'myapp/foto_assortment_gifts/assortment_gifts10.jpg' %}"
+                                     width="200"/>
+            <p>Обновления, новинки в группе VK#</p></li>
+    </ul>
+
+{% endblock %}

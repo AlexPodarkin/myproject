@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %} title {% endblock %}</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
+            crossorigin="anonymous"></script>
+    {#    GOOGLE ШРИФТ #}
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+    <!-- подключил еще шрифт но ПОКА НЕ ИСПОЛЬЗОВАЛ font-family: 'Oswald', sans-serif; -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@300&display=swap" rel="stylesheet">
+    <!-- подключил еще шрифт но ПОКА НЕ ИСПОЛЬЗОВАЛ font-family: 'Poppins', sans-serif; -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&family=Rubik+Moonrocks&family=Sofia+Sans+Condensed:wght@500&display=swap"
+          rel="stylesheet">
+    <link rel="stylesheet" href="{% static 'myapp/css/firstapp.css' %}">
+    {% block head %}
+    {% endblock %}
+</head>
+<body>
+
+<div class="wrapper">
+    <div class="content">
+
+        <header id="header" class="fixed-top">
+            {% block header %}
+                <nav class="navbar navbar-expand-lg navbar-dark" style="background-color: #a2b5f7;">
+                    <div class="container-fluid">
+                        <img class="image" alt="" src="{% static 'myapp/index/logo.png' %}">
+
+
+                        <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                                aria-expanded="false" aria-label="Toggle navigation">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
+                        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                                {#                                вариант главная не активна: a class="nav-link active" aria-current="page"#}
+                                <li class="nav-item"><a class="nav-link" href="{% url 'index' %}">Главная</a></li>
+                                <li class="nav-item"><a class="nav-link" href="{% url 'make_order' %}">Сделать заказ</a>
+                                </li>
+                                <li class="nav-item"><a class="nav-link" href="{% url 'our_works' %}">Отзывы</a></li>
+                                <li class="nav-item"><a class="nav-link" href="{% url 'assortment_gifts' %}">Show
+                                    Podarkin</a></li>
+                                <li class="nav-item dropdown">
+                                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                                       data-bs-toggle="dropdown" aria-expanded="false">
+                                        Еще
+                                    </a>
+                                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                        <li><a class="dropdown-item" href="{% url 'printing_on_mugs' %}">Печать на
+                                            кружках</a></li>
+                                        <li><a class="dropdown-item" href="{% url 'printing_shirts' %}">Печать на
+                                            футболках</a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                            <img class="circle-gift" alt="" src="{% static 'myapp/index/circle_gift.png' %}">
+                        </div>
+                    </div>
+                </nav>
+            {% endblock %}
+        </header>
+        <main>
+            {% block main %}
+                main
+            {% endblock %}
+            <ul class="social-icons alex">
+                <li class="nav-item">
+                    <a href="https://wa.me/+79270740573"><img src='{% static 'myapp/index/WhatsApp.png' %}'
+                                                              alt=""/></a>
+                </li>
+                <li class="nav-item">
+                    <a href="https://vk.com/andr.podarkin"><img src='{% static 'myapp/index/vk.png' %}'
+                                                                alt=""/></a>
+                </li>
+                <li class="nav-item">
+                    <a href="https://t.me/Alex_podarkiN"><img src='{% static 'myapp/index/telegram-logo.png' %}'
+                                                              alt=""/></a>
+                </li>
+            </ul>
+        </main>
+    </div>
+    <footer>
+        <div>
+            <div>
+                <a href="#" id="toTop"><img src="{% static 'myapp/index/up.png' %}" alt=""></a>
+            </div>
+            <div class="footer">
+                Всегда готовы предоставить вам технические описания продукции, коммерческие предложения и другие
+                документы, а также ответить на все интересующие вас вопросы. <br> Alex PodarkiN &#174;
+            </div>
+        </div>
+    </footer>
+</div>
+</body>
+</html>

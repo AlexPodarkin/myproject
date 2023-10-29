@@ -1,0 +1,35 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %} Печать на футболках {% endblock %}
+
+{% block head %}
+    <link rel="shortcut icon" type="image/x-icon" href="{% static 'myapp/index/printing_shirts.png' %}"/>
+{% endblock %}
+
+{% block main %}
+    <div class="description-printing-mugs">
+        <h3>
+            Варианты печати на футболках
+        </h3>
+    </div>
+    <div>
+        <ul class="foto_polaroid">
+            <li class="polaroid_li"><img alt="" src="{% static 'myapp/foto_printing_shirts/printing_shirts5.jpg' %}"
+                                         width="200">
+                <p>Печать на рабочей форме&#128119;</p></li>
+            <li class="polaroid_li"><img alt="" src="{% static 'myapp/foto_printing_shirts/printing_shirts2.jpg' %}"
+                                         width="200"/>
+                <p>Прямая печать на белой ткани#</p></li>
+            <li class="polaroid_li"><img alt="" src="{% static 'myapp/foto_printing_shirts/printing_shirts3.jpg' %}"
+                                         width="200"/>
+                <p>Пленка премиум для черной ткани#</p></li>
+            <li class="polaroid_li"><img alt="" src="{% static 'myapp/foto_printing_shirts/printing_shirts4.jpg' %}"
+                                         width="200"/>
+                <p>Печать на спортивной форме&#9917;</p></li>
+            <li class="polaroid_li"><img alt="" src="{% static 'myapp/foto_printing_shirts/printing_shirts1.jpg' %}"
+                                         width="200">
+                <p>А еще мы печатаем на подушках#</p></li>
+        </ul>
+    </div>
+{% endblock %}

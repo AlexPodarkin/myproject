@@ -1,0 +1,63 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %} PodarkiN {% endblock %}
+
+{% block head %}
+    <link rel="shortcut icon" type="image/x-icon" href="{% static 'myapp/index/index.png' %}"/>
+{% endblock %}
+{% block main %}
+    <div class="description-polaroid">
+        <h3>
+            Мы рады приветствовать вас на нашем сайте
+        </h3>
+    </div>
+    <div>
+        <ul class="foto_polaroid">
+            <li class="polaroid_li"><img alt="" src="{% static 'myapp/foto_index/podarkin_1.jpg' %}" width="200">
+                <p>Более 7 лет на рынке&#127873;</p></li>
+            <li class="polaroid_li"><img alt="" src="{% static 'myapp/foto_index/podarkin_2.jpg' %}" width="200"/>
+                <p>Занимаемся шарами#</p></li>
+            <li class="polaroid_li"><img alt="" src="{% static 'myapp/foto_index/podarkin_3.jpg' %}" width="200"/>
+                <p>Продаем сувениры#</p></li>
+            <li class="polaroid_li"><img alt="" src="{% static 'myapp/foto_index/podarkin_4.jpg' %}" width="200"/>
+                <p>Изготавливаем сувениры#</p></li>
+        </ul>
+    </div>
+
+    <div class="description-polaroid">
+        <h3>
+            <br>
+            У нас вы можете заказать таблички
+        </h3>
+    </div>
+    <ul class="foto_polaroid">
+        <li class="polaroid_li"><img alt="" src="{% static 'myapp/foto_index/foto_sign1.jpg' %}" width="200">
+            <p>Многообразие форм#</p></li>
+        <li class="polaroid_li"><img alt="" src="{% static 'myapp/foto_index/foto_sign2.jpg' %}" width="200"/>
+            <p>Цвет выбираете вы#</p></li>
+        <li class="polaroid_li"><img alt="" src="{% static 'myapp/foto_index/foto_sign3.jpg' %}" width="200"/>
+            <p>Выгодные предложения#</p></li>
+        <li class="polaroid_li"><img alt="" src="{% static 'myapp/foto_index/foto_sign4.jpg' %}" width="200"/>
+            <p>Не только адресные таблички#</p></li>
+    </ul>
+
+    <div class="description-polaroid">
+        <h3>
+            <br>
+            Гелиевые шары
+        </h3>
+    </div>
+    <ul class="foto_polaroid">
+        <li class="polaroid_li"><img alt="" src="{% static 'myapp/foto_index/balloon_orders1.jpg' %}" width="200">
+            <p>Дуем чудесные композиции#</p></li>
+        <li class="polaroid_li"><img alt="" src="{% static 'myapp/foto_index/balloon_orders2.jpg' %}" width="200"/>
+            <p>Делаем надписи на шарах#</p></li>
+        <li class="polaroid_li"><img alt="" src="{% static 'myapp/foto_index/balloon_orders3.jpg' %}" width="200"/>
+            <p>Большой ассортимент шаров#</p></li>
+        <li class="polaroid_li"><img alt="" src="{% static 'myapp/foto_index/balloon_orders4.jpg' %}" width="200"/>
+            <p>Крутые подарочные коробки#</p></li>
+    </ul>
+
+
+{% endblock %}

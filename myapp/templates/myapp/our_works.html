@@ -1,0 +1,81 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %} Наши работы {% endblock %}
+
+{% block head %}
+    <link rel="shortcut icon" type="image/x-icon" href="{% static 'myapp/index/demonstration.png' %}"/>
+{% endblock %}
+
+{% block main %}
+    <div class="description-polaroid">
+        <h3>
+            Наши работы
+        </h3>
+    </div>
+
+    <div>
+        <ul class="foto_polaroid">
+            <li class="polaroid_li"><img alt="" src="{% static 'myapp/foto_our_works/our_works2.jpg' %}" width="200">
+                <p>Табличка для дворца&#128081;</p></li>
+            <li class="polaroid_li"><img alt="" src="{% static 'myapp/foto_our_works/our_works10.jpg' %}"
+                                         width="200"/>
+                <p>Для зеленого фасада#</p></li>
+            <li class="polaroid_li"><img alt="" src="{% static 'myapp/foto_our_works/our_works3.jpg' %}"
+                                         width="200"/>
+                <p>Синий информационный цвет#</p></li>
+            <li class="polaroid_li"><img alt="" src="{% static 'myapp/foto_our_works/our_works4.jpg' %}"
+                                         width="200"/>
+                <p>Осторожно злая собака#</p></li>
+            <li class="polaroid_li"><img alt="" src="{% static 'myapp/foto_our_works/our_works5.jpg' %}"
+                                         width="200"/>
+                <p>Стандартная табличка#</p></li>
+            <li class="polaroid_li"><img alt="" src="{% static 'myapp/foto_our_works/our_works6.jpg' %}"
+                                         width="200"/>
+                <p>Табличка для мастера#</p></li>
+            <li class="polaroid_li"><img alt="" src="{% static 'myapp/foto_our_works/our_works7.jpg' %}"
+                                         width="200"/>
+                <p>2-а в одном#</p></li>
+            <li class="polaroid_li"><img alt="" src="{% static 'myapp/foto_our_works/our_works8.jpg' %}"
+                                         width="200"/>
+                <p>Для парикмахерской#</p></li>
+            <li class="polaroid_li"><img alt="" src="{% static 'myapp/foto_our_works/our_works1.jpg' %}"
+                                         width="200"/>
+                <p>Цвета можно комбинировать#</p></li>
+        </ul>
+    </div>
+
+    <br><br>
+    {% if reviews %}
+        <div class="description-polaroid">
+            <h3>
+                Заметки с отзывами
+            </h3>
+        </div>
+
+        <ul id="notes" class="flex-container">
+            {% for review in reviews %}
+                <li>
+                    <p>{{ review.name_autor }}: <br>{{ review.review_autor }}</p>
+                </li>
+            {% endfor %}
+        </ul>
+    {% endif %}
+    <div class="description-polaroid">
+        <h3>
+            Будем рады вашему отзыву &#127873;
+        </h3>
+    </div>
+
+    <div>
+        <form action="{% url 'our_works' %}" method="post" enctype="multipart/form-data">
+            {% csrf_token %}
+            {{ form.as_p }}
+            <div class="our_works">
+                <input type="submit" value="Отправить">
+            </div>
+        </form>
+    </div>
+
+
+{% endblock %}

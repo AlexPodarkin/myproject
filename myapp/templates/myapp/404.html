@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %} Печать на футболках {% endblock %}
+
+{% block head %}
+    <link rel="shortcut icon" type="image/x-icon" href="{% static 'myapp/404/icons.png' %}"/>
+{% endblock %}
+
+{% block main %}
+    <div class="description-printing-mugs">
+        <h3>
+            Упс! Что-то пошло не так, этой страницы не существует...
+        </h3>
+    </div>
+    <div>
+        <ul class="foto_polaroid">
+            <li class="polaroid_li"><img alt="" src="{% static 'myapp/404/404.jpg' %}"
+                                         width="200">
+                <p>Пора отдохнуть 404#</p></li>
+        </ul>
+    </div>
+{% endblock %}

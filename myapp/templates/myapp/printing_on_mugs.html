@@ -1,0 +1,46 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %} Печать на кружках {% endblock %}
+
+{% block head %}
+    <link rel="shortcut icon" type="image/x-icon" href="{% static 'myapp/index/printing_on_mugs.png' %}"/>
+{% endblock %}
+
+{% block main %}
+    <div class="description-printing-mugs">
+        <h3>
+            Если вы хотите сделать заказ, пишите в любой удобный для вас
+            мессенджер, ссылки в правом нижнем углу. Мы сделаем эскиз по вашим фото и напечатаем кружку!
+        </h3>
+    </div>
+    <div>
+        <ul class="foto_polaroid">
+            <li class="polaroid_li"><img alt="" src="{% static 'myapp/foto_printing_on_mugs/printing_mugs1.jpg' %}"
+                                         width="200">
+                <p>Кружки по Гари Поттеру&#9889;</p></li>
+            <li class="polaroid_li"><img alt="" src="{% static 'myapp/foto_printing_on_mugs/printing_mugs2.jpg' %}"
+                                         width="200"/>
+                <p>Бокс с кружкой для Мамы#</p></li>
+            <li class="polaroid_li"><img alt="" src="{% static 'myapp/foto_printing_on_mugs/printing_mugs3.jpg' %}"
+                                         width="200"/>
+                <p>Пора в путешествие#</p></li>
+            <li class="polaroid_li"><img alt="" src="{% static 'myapp/foto_printing_on_mugs/printing_mugs4.jpg' %}"
+                                         width="200"/>
+                <p>Кружки хамелеон в наличии&#9749;</p></li>
+        </ul>
+        <br>
+    </div>
+    <ul class="foto_polaroid">
+        <li class="polaroid_li"><img alt="" src="{% static 'myapp/foto_printing_on_mugs/printing_mugs5.jpg' %}"
+                                     width="200">
+            <p>Кружка для лучшего Врача#</p></li>
+        <li class="polaroid_li"><img alt="" src="{% static 'myapp/foto_printing_on_mugs/printing_mugs6.jpg' %}"
+                                     width="200"/>
+            <p>Дарите комплименты и улыбки#</p></li>
+        <li class="polaroid_li"><img alt="" src="{% static 'myapp/foto_printing_on_mugs/printing_mugs7.jpg' %}"
+                                     width="200"/>
+            <p>Радуйте родных&#128151;</p></li>
+    </ul>
+
+{% endblock %}
